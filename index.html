@@ -7,61 +7,65 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffe6f2;
+            background-color: #f0f8ff; /* Màu nền sáng tươi */
             margin: 0;
             padding: 0;
         }
         .navbar {
-            background-color: #ff69b4;
-            padding: 10px 0;
+            background-color: #ff80ff; /* Màu hồng tươi */
+            padding: 15px 0;
             text-align: center;
         }
         .navbar a {
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
         .navbar a:hover {
-            background-color: #ff1493;
+            background-color: #ff1493; /* Màu hồng đậm khi hover */
             border-radius: 5px;
         }
         .container {
-            background: #ffb6c1;
-            border-radius: 20px;
-            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+            background: #ffb3d9; /* Màu hồng nhẹ */
+            border-radius: 25px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
             padding: 30px;
             max-width: 900px;
             text-align: center;
-            color: #fff;
+            color: #333;
             margin: 20px auto;
         }
         h1 {
-            font-size: 3rem;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            font-size: 3.5rem;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Hiệu ứng đổ bóng */
+            color: #ff1493; /* Màu hồng đậm */
         }
         p, .poem, .story, .song {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.8;
-            background-color: #ff91a4;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 15px;
+            background-color: #ffccf2; /* Màu nền nhẹ cho các đoạn văn bản */
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #555; /* Màu chữ đậm */
         }
         .flower-img {
             width: 100%;
             border-radius: 15px;
-            margin-top: 20px;
-            border: 3px solid #fff;
+            margin-top: 25px;
+            border: 5px solid #fff;
         }
         .bottom-text {
             margin-top: 20px;
             font-style: italic;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            color: #ff69b4;
         }
         .highlight {
             animation: blink 1s infinite alternate;
-            border: 3px solid yellow;
+            border: 3px solid #ffff00; /* Màu vàng sáng */
         }
         @keyframes blink {
             from { opacity: 1; }
@@ -71,23 +75,30 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #ff69b4;
+            background-color: #ff1493;
             color: #fff;
             border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
             cursor: pointer;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+        }
+        .back-to-top:hover {
+            background-color: #ff69b4;
         }
     </style>
     <script>
         function highlightSection(id) {
+            const sections = document.querySelectorAll('.poem, .story, #chuc');
+            sections.forEach(section => section.classList.remove('highlight'));
+            
             const section = document.getElementById(id);
             section.classList.add('highlight');
             setTimeout(() => section.classList.remove('highlight'), 3000);
         }
+
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -124,9 +135,9 @@
                 Mãi luôn hạnh phúc, rạng ngời niềm tin.<br>
                 8/3 đến lung linh,<br>
                 Trao nhau yêu mến — trọn tình thiết tha. 🌸<br>
-                </p>
+            </p>
         </div>
-        <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/3/7/loi-chuc-ngay-quoc-te-phu-nu-8-3-8-16781604647651073705675.jpg">
+        <img class="flower-img" src="https://images.unsplash.com/photo-1557268628-6c2f9f240bb5?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhY3JhfDkxfHxwZWFjdWV8ZW58MHx8fHwxNjY0NzQ4Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Hoa tươi 8/3">
         <div class="story" id="truyen">
             <p><h4>**Vết sẹo của mẹ**</h4><br>
                 Một cậu bé mời mẹ tham dự buổi họp phụ huynh đầu tiên ở trường tiểu học.<br>
@@ -138,8 +149,7 @@
                 - Vết sẹo này không chữa được nữa, nhưng cho tới ngày hôm nay, tôi chưa hề hối tiếc về điều mình đã làm.<br>
                 Đến đây, cậu bé chạy ra khỏi chỗ nấp của mình về phía mẹ, nước mắt lưng tròng. Cậu bé ôm lấy mẹ mình và cảm nhận được sự hy sinh của mẹ dành cho mình. Cậu bé nắm chặt tay mẹ suốt cả ngày hôm đó như không muốn rời.</p>
         </div>
-        <p class="bottom-text">"Phụ nữ chính là bông hoa đẹp nhất trong vườn hoa cuộc đời."<br>
-        35-36-9</p>
+        <p class="bottom-text">"Phụ nữ chính là bông hoa đẹp nhất trong vườn hoa cuộc đời."<br>35-36-9</p>
     </div>
     <button class="back-to-top" onclick="scrollToTop()">⬆️</button>
 </body>
