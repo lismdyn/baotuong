@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường 8/3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #ff69b4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #ff1493;
+            border-radius: 5px;
+        }
+        .container {
+            background: #ffb6c1;
+            border-radius: 20px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            max-width: 900px;
+            text-align: center;
+            color: #fff;
+            margin: 20px auto;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+        }
+        p, .poem, .story, .song {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            background-color: #ff91a4;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .flower-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 3px solid #fff;
+        }
+        .bottom-text {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        .highlight {
+            animation: blink 1s infinite alternate;
+            border: 3px solid yellow;
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.3; }
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+        function highlightSection(id) {
+            const section = document.getElementById(id);
+            section.classList.add('highlight');
+            setTimeout(() => section.classList.remove('highlight'), 3000);
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#chuc" onclick="highlightSection('chuc')">Lời Chúc</a>
+        <a href="#tho" onclick="highlightSection('tho')">Thơ</a>
+        <a href="#truyen" onclick="highlightSection('truyen')">Truyện Ngắn</a>
+    </div>
+    <div class="container">
+        <h1>Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3!</h1>
+        <p id="chuc">"Nhân ngày Quốc tế Phụ nữ 8/3, xin gửi đến bà, mẹ, chị, em và tất cả những người phụ nữ trong gia đình mình những lời chúc yêu thương nhất. Chúc mọi người luôn mạnh khỏe, hạnh phúc và thành công trong cuộc sống. Cảm ơn vì đã luôn là chỗ dựa vững chắc, là ngọn lửa yêu thương sưởi ấm gia đình ta. Mong rằng mỗi ngày trôi qua đều ngập tràn tiếng cười, niềm vui và những khoảnh khắc đáng nhớ. Yêu thương và trân trọng mọi người thật nhiều! ❤️"</p>
+        <div class="poem" id="tho">
+            <p><h4>**Chúc Mừng Ngày 8/3**</h4><br>
+
+                Ngày hôm nay thật diệu kỳ,<br>
+                Chúc cho phụ nữ tràn trề niềm vui.<br>
+                Nụ cười rạng rỡ trên môi,<br>
+                Ngập tràn hạnh phúc, rạng ngời thắm tươi.<br><br>
+                
+                Bà là ánh sáng rạng ngời,<br>
+                Dìu con khôn lớn giữa đời thăng trầm.<br>
+                Mẹ là ngọn gió dịu êm,<br>
+                Vỗ về con trẻ suốt đêm bao ngày.<br><br>
+                
+                Chị là người bạn nắm tay,<br>
+                Chia sẻ buồn vui tháng ngày bên nhau.<br>
+                Em là nụ thắm muôn màu,<br>
+                Xinh tươi rạng rỡ như sao sáng ngời.<br><br>
+                
+                Chúc người phụ nữ đời tôi,<br>
+                Mãi luôn hạnh phúc, rạng ngời niềm tin.<br>
+                8/3 đến lung linh,<br>
+                Trao nhau yêu mến — trọn tình thiết tha. 🌸<br>
+                </p>
+        </div>
+        <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/3/7/loi-chuc-ngay-quoc-te-phu-nu-8-3-8-16781604647651073705675.jpg">
+        <div class="story" id="truyen">
+            <p><h4>**Vết sẹo của mẹ**</h4><br>
+                Một cậu bé mời mẹ tham dự buổi họp phụ huynh đầu tiên ở trường tiểu học.<br>
+                Điều cậu bé sợ đã thành sự thật, mẹ cậu bé nhận lời. Đây là lần đầu tiên bạn bè và giáo viên chủ nhiệm gặp mẹ cậu bé và cậu rất xấu hổ về vẻ bề ngoài của mẹ mình. Mặc dù cũng là một người phụ nữ đẹp nhưng bà có một vết sẹo lớn che gần toàn bộ mặt bên phải. Cậu bé không bao giờ muốn hỏi mẹ mình tại sao bị vết sẹo lớn vậy. Vào buổi họp mặt, mọi người có ấn tượng rất đẹp về sự dịu dàng và vẻ đẹp tự nhiên của người mẹ mặc cho vết sẹo đập vào mắt, nhưng cậu bé vẫn xấu hổ và giấu mình vào một góc tránh mặt mọi người. Ở đó, cậu bé nghe được mẹ mình nói chuyện với cô giáo.<br>
+                - Làm sao chị bị vết sẹo như vậy trên mặt? - Cô giáo của cậu hỏi.<br>
+                Người mẹ trả lời:<br>
+                - Khi con tôi còn bé, nó đang ở trong phòng thì lửa bốc lên. Mọi người đều sợ không dám vào vì ngọn lửa đã bốc lên quá cao, và thế là tôi chạy vào. Khi tôi chạy đến chỗ nó, tôi thấy một xà nhà đang rơi xuống người nó và tôi vội vàng lấy mình che cho nó. Tôi bị đau đến ngất xỉu nhưng thật là may mắn là có một anh lính cứu hỏa đã vào và cứu cả hai mẹ con tôi.<br>
+                Người mẹ chạm vào vết sẹo nhăn nhúm trên mặt rồi nói tiếp:<br>
+                - Vết sẹo này không chữa được nữa, nhưng cho tới ngày hôm nay, tôi chưa hề hối tiếc về điều mình đã làm.<br>
+                Đến đây, cậu bé chạy ra khỏi chỗ nấp của mình về phía mẹ, nước mắt lưng tròng. Cậu bé ôm lấy mẹ mình và cảm nhận được sự hy sinh của mẹ dành cho mình. Cậu bé nắm chặt tay mẹ suốt cả ngày hôm đó như không muốn rời.</p>
+        </div>
+        <p class="bottom-text">"Phụ nữ chính là bông hoa đẹp nhất trong vườn hoa cuộc đời."<br>
+        35-36-9</p>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">⬆️</button>
+</body>
+</html>
